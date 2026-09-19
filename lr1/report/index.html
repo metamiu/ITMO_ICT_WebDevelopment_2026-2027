@@ -1,0 +1,657 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Лабораторная работа 1 - Веб-программирование. Ипатова Ульяна. К3339</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Веб-программирование. Ипатова Ульяна. К3339" class="md-header__button md-logo" aria-label="Веб-программирование. Ипатова Ульяна. К3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Веб-программирование. Ипатова Ульяна. К3339
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Веб-программирование. Ипатова Ульяна. К3339" class="md-nav__button md-logo" aria-label="Веб-программирование. Ипатова Ульяна. К3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Веб-программирование. Ипатова Ульяна. К3339
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 1. Обмен сообщениями по UDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 2. Вычисления через TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-html-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 3. Раздача HTML-страницы по HTTP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 4. Чат на сокетах
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-getpost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 5. Простой веб-сервер GET/POST
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 1. Обмен сообщениями по UDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 2. Вычисления через TCP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-html-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 3. Раздача HTML-страницы по HTTP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 4. Чат на сокетах
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-getpost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задание 5. Простой веб-сервер GET/POST
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1">Лабораторная работа 1. Работа с сокетами</h1>
+<p><strong>Студент:</strong> Ипатова Ульяна<br />
+<strong>Группа:</strong> К3339<br />
+<strong>Дисциплина:</strong> Веб-программирование</p>
+<h2 id="_1">Цель работы</h2>
+<p>Реализовать клиентские и серверные программы на Python с использованием библиотеки <code>socket</code>: обмен сообщениями по UDP, вычисления по TCP, передачу HTML-страницы, чат и обработку GET/POST-запросов.</p>
+<h2 id="1-udp">Задание 1. Обмен сообщениями по UDP</h2>
+<p><strong>Файлы:</strong> <code>task_1_udp/server_UDP.py</code>, <code>task_1_udp/client_UDP.py</code>.</p>
+<p>Клиент создаёт UDP-сокет и отправляет серверу строку <code>Hello server!</code> с помощью <code>sendto()</code>. Сервер принимает её через <code>recvfrom()</code>, выводит на экран и отправляет ответ <code>Hello client!</code>. Клиент получает и выводит ответ. В программе используется адрес <code>localhost</code> и порт <code>8080</code>.</p>
+<p>Фрагмент из сервера:</p>
+<pre><code class="language-python">server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server_socket.bind(('localhost', 8080))
+data, client_address = server_socket.recvfrom(1024)
+request = data.decode()
+print(request)
+server_socket.sendto(&quot;Hello client!&quot;.encode(), client_address)
+</code></pre>
+<p><strong>Запуск:</strong> в папке <code>task_1_udp</code> сначала выполнить <code>python server_UDP.py</code>, затем в другом терминале <code>python client_UDP.py</code>.</p>
+<p><strong>Ожидаемый результат:</strong> сервер выводит <code>Hello server!</code>, клиент выводит <code>Hello client!</code>.</p>
+<p><img alt="Обмен сообщениями по UDP - сервер" src="../images/UDP_server.png" />
+<img alt="Обмен сообщениями по UDP - клиент" src="../images/UDP_client.png" /></p>
+<h2 id="2-tcp">Задание 2. Вычисления через TCP</h2>
+<p><strong>Файлы:</strong> <code>task_2_tcp/server_TCP.py</code>, <code>task_2_tcp/client_TCP.py</code>.</p>
+<p>Вариант 2: решение квадратного уравнения <code>ax² + bx + c = 0</code>. Клиент устанавливает TCP-соединение через <code>connect()</code>, предлагает ввести три коэффициента через пробел и передаёт введённую строку серверу. Сервер получает её методом <code>recv()</code>, разделяет на три значения и вычисляет дискриминант <code>D = b² - 4ac</code>.</p>
+<p>При <code>a = 0</code> сервер отправляет сообщение <code>Это не квадратное уравнение</code>. При положительном дискриминанте вычисляет два корня, при нулевом - один; при отрицательном отправляет <code>Нет корней!</code>. Ответ приходит клиенту и выводится в терминале.</p>
+<p>Фрагмент из сервера:</p>
+<pre><code class="language-python">a, b, c = parameters.split()
+if float(a) == 0:
+    client_connection.sendall(&quot;Это не квадратное уравнение&quot;.encode())
+    client_connection.close()
+    continue
+discriminant = float(b)**2 - 4 * float(a) * float(c)
+</code></pre>
+<p><strong>Запуск:</strong> в папке <code>task_2_tcp</code> сначала выполнить <code>python server_TCP.py</code>, затем в другом терминале <code>python client_TCP.py</code>. Для проверки можно ввести <code>1 -3 2</code> (корни 2 и 1), <code>1 2 1</code> (корень -1), <code>1 0 1</code> (сообщение об отсутствии корней).</p>
+<p><img alt="Результат вычислений по TCP - сервер" src="../images/TCP_server.png" />
+<img alt="Результат вычислений по TCP - клиент" src="../images/TCP_client.png" /></p>
+<h2 id="3-html-http">Задание 3. Раздача HTML-страницы по HTTP</h2>
+<p><strong>Файлы:</strong> <code>task_3_http/server_HTTP.py</code>, <code>task_3_http/index.html</code>.</p>
+<p>Сервер создаёт TCP-сокет, принимает подключение браузера, читает HTML-страницу из файла <code>index.html</code> и отправляет HTTP-ответ. В ответе указаны статус <code>200 OK</code>, тип содержимого <code>text/html</code>, длина HTML в байтах (<code>Content-Length</code>) и заголовок <code>Connection: close</code>. Затем передаётся содержимое файла.</p>
+<p>Фрагмент из сервера:</p>
+<pre><code class="language-python">with open(&quot;index.html&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as file:
+    html = file.read()
+html_response = html.encode()
+http_headers = (
+    &quot;HTTP/1.1 200 OK\r\n&quot;
+    &quot;Content-Type: text/html; charset=UTF-8\r\n&quot;
+    f&quot;Content-Length: {len(html_response)}\r\n&quot;
+    &quot;Connection: close\r\n&quot;
+    &quot;\r\n&quot;
+).encode()
+</code></pre>
+<p><strong>Запуск:</strong> открыть терминал в папке <code>task_3_http</code>, выполнить <code>python server_HTTP.py</code>, затем перейти в браузере по адресу <code>http://localhost:8080/</code>. Файл <code>index.html</code> должен находиться в этой же папке.</p>
+<p><img alt="HTML-сервер" src="../images/HTTP_server.png" />
+<img alt="HTML-клиент" src="../images/HTTP_client.png" /></p>
+<h2 id="4">Задание 4. Чат на сокетах</h2>
+<p><strong>Файлы:</strong> <code>task_4_chat/server_chat.py</code>, <code>task_4_chat/client_chat.py</code>.</p>
+<p>Чат работает по TCP. При запуске клиент запрашивает имя пользователя и передаёт его серверу. Сервер хранит подключённых пользователей в словаре <code>clients</code>: ключ - сокет, значение - имя. Для каждого клиента сервер создаёт отдельный поток с помощью <code>threading.Thread()</code>. Полученные сообщения сервер пересылает остальным участникам через <code>broadcast()</code>.</p>
+<p>На клиенте отдельный поток принимает сообщения, а основной поток считывает ввод с клавиатуры. Для выхода используется команда <code>/покинуть группу/</code>.</p>
+<p>Фрагмент из сервера:</p>
+<pre><code class="language-python">clients = {}
+
+while True:
+    client_socket, client_address = server_socket.accept()
+    thread = threading.Thread(
+        target=handle_client,
+        args=(client_socket, client_address)
+    )
+    thread.start()
+</code></pre>
+<p><strong>Запуск:</strong> в папке <code>task_4_chat</code> выполнить <code>python server_chat.py</code>. Затем в двух или трёх других терминалах выполнить одну и ту же команду <code>python client_chat.py</code>. В каждом клиенте ввести своё имя, отправить сообщения и проверить выход командой <code>/покинуть группу/</code>.</p>
+<p><img alt="Работа многопользовательского чата - сервер" src="../images/chat_server.png" />
+<img alt="Работа многопользовательского чата - клиент 1" src="../images/chat_client_1.png" />
+<img alt="Работа многопользовательского чата - клиент 2" src="../images/chat_client_2.png" />
+<img alt="Работа многопользовательского чата - клиент 3" src="../images/chat_client_3.png" /></p>
+<h2 id="5-getpost">Задание 5. Простой веб-сервер GET/POST</h2>
+<p><strong>Файл:</strong> <code>task_5_web/server_WEB.py</code>.</p>
+<p>Сервер принимает HTTP-запросы через TCP-сокет. Функция <code>receive_request()</code> считывает заголовки и тело запроса, <code>parse_request()</code> определяет метод и путь. При <code>GET /</code> формируется страница с журналом оценок и формой. При <code>POST /grade</code> сервер получает название дисциплины и оценку из формы, после чего снова выводит страницу.</p>
+<p>Оценки хранятся в словаре <code>grades</code>: названием дисциплины служит ключ, а значением - список её оценок. Поэтому при добавлении двух оценок по одному предмету создаётся одна запись с двумя оценками, а не две отдельные записи.</p>
+<p>Фрагмент из сервера:</p>
+<pre><code class="language-python">grades = {}
+
+if subject not in grades:
+    grades[subject] = []
+
+grades[subject].append(grade)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Путь</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/</code></td>
+<td>Показать журнал и форму добавления оценки</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/grade</code></td>
+<td>Принять данные формы и добавить оценку</td>
+</tr>
+</tbody>
+</table>
+<p>Форма содержит поле дисциплины и поле оценки от 2 до 5. В коде сервера есть проверка пустого названия, проверка <code>subject.isdigit()</code> и проверка диапазона оценки. Функция <code>add_grade()</code> возвращает текст ошибки при неверных данных, но текущая функция <code>handle_client()</code> этот текст не показывает на HTML-странице.</p>
+<p><strong>Запуск:</strong> в папке <code>task_5_web</code> выполнить <code>python server_WEB.py</code>, затем открыть <code>http://localhost:8080/</code> и добавить несколько оценок. Например, после добавления оценок 5 и 4 по математике в журнале должна отображаться запись <code>Математика: [5, 4]</code>. Данные находятся в памяти и пропадают после перезапуска сервера.</p>
+<p><img alt="Журнал оценок - сервер" src="../images/server_WEB.png" />
+<img alt="Журнал оценок - клиент" src="../images/client_WEB.png" /></p>
+<h2 id="_2">Вывод</h2>
+<p>В ходе работы написаны пять программ с использованием сокетов. В первых трёх заданиях реализованы обмен сообщениями и передача HTML-страницы, в четвёртом - многопользовательский чат с потоками, в пятом - простой HTTP-сервер с журналом оценок.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
