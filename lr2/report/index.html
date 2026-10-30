@@ -1,0 +1,1580 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lr1/report/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Лабораторная работа 2 - Веб-программирование. Ипатова Ульяна. К3339</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no2" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Веб-программирование. Ипатова Ульяна. К3339" class="md-header__button md-logo" aria-label="Веб-программирование. Ипатова Ульяна. К3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Веб-программирование. Ипатова Ульяна. К3339
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Веб-программирование. Ипатова Ульяна. К3339" class="md-nav__button md-logo" aria-label="Веб-программирование. Ипатова Ульяна. К3339" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Веб-программирование. Ипатова Ульяна. К3339
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Цель работы и индивидуальное задание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-django-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Создание и настройка Django-проекта
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Создание и настройка Django-проекта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные представления (views)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные шаблоны пользовательского интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Проектирование базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Проектирование базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица моделей и связей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studygroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель StudyGroup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studentprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель StudentProfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Homework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Связи между моделями и миграции
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Реализация авторизации и разграничения прав
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Реализация авторизации и разграничения прав">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация ученика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вход преподавателя, ученика и администратора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверки доступа и выход
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Интерфейс ученика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Интерфейс ученика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список домашних заданий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Просмотр задания и отправка ответа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Интерфейс преподавателя и Django Admin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Интерфейс преподавателя и Django Admin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Кабинет и управление заданиями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы учеников и оценивание через сайт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Стандартная административная панель
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Журнал успеваемости
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Журнал успеваемости">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Журнал ученика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Журнал преподавателя
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Поиск, фильтрация и пагинация
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Поиск, фильтрация и пагинация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поиск и совместная фильтрация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Базовая пагинация
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Заключение
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Цель работы и индивидуальное задание
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-django-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Создание и настройка Django-проекта
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Создание и настройка Django-проекта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные представления (views)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные шаблоны пользовательского интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Проектирование базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Проектирование базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сводная таблица моделей и связей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studygroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель StudyGroup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studentprofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель StudentProfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#homework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Homework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Модель Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Связи между моделями и миграции
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Реализация авторизации и разграничения прав
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Реализация авторизации и разграничения прав">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация ученика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вход преподавателя, ученика и администратора
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверки доступа и выход
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Интерфейс ученика
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Интерфейс ученика">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Список домашних заданий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Просмотр задания и отправка ответа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Интерфейс преподавателя и Django Admin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Интерфейс преподавателя и Django Admin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Кабинет и управление заданиями
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ответы учеников и оценивание через сайт
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Стандартная административная панель
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Журнал успеваемости
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Журнал успеваемости">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Журнал ученика
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Журнал преподавателя
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Поиск, фильтрация и пагинация
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Поиск, фильтрация и пагинация">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поиск и совместная фильтрация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Базовая пагинация
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Заключение
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no2">Лабораторная работа №2. Доска домашних заданий</h1>
+<h2 id="1">1. Цель работы и индивидуальное задание</h2>
+<p>Цель работы - получить практические навыки разработки веб-приложений с использованием Django.</p>
+<p>Индивидуальное задание: <strong>вариант 2 - «Доска домашних заданий»</strong>. О домашнем задании необходимо хранить предмет, преподавателя, дату выдачи, период выполнения, текст задания и информацию о штрафах.</p>
+<p>По условиям варианта требуется реализовать:</p>
+<ul>
+<li>регистрацию новых пользователей;</li>
+<li>просмотр домашних заданий по всем дисциплинам с указанием сроков выполнения и описания;</li>
+<li>сдачу домашних заданий в текстовом виде;</li>
+<li>выставление оценки администратором или преподавателем средствами Django Admin;</li>
+<li>таблицу оценок всех учеников учебной группы в клиентской части сайта.</li>
+</ul>
+<p>Дополнительные требования включают CSS-оформление интерфейса, разграничение прав в пользовательской части сайта, поиск, фильтрацию и пагинацию списков заданий.</p>
+<p>В ходе работы использованы следующие технологии:</p>
+<ul>
+<li><strong>Python</strong> обработка запросов, проверка данных и работа с моделями.</li>
+<li><strong>Django</strong> организация проекта, маршрутизация, ORM, формы, авторизация и административная панель.</li>
+<li><strong>PostgreSQL</strong> хранение пользователей, учебных групп, дисциплин, заданий и ответов.</li>
+<li><strong>Jinja2</strong> формирование пользовательских HTML-страниц.</li>
+<li><strong>HTML</strong> структура страниц, формы, карточки заданий и таблица оценок.</li>
+<li><strong>CSS</strong> оформление сайта, розовая цветовая гамма и адаптация страниц к небольшим экранам.</li>
+</ul>
+<h2 id="2-django-">2. Создание и настройка Django-проекта</h2>
+<p>В папке создан Django-проект <code>config</code> и приложение <code>homework</code>. Пакет <code>config</code> содержит общие настройки и корневые маршруты, а в приложении <code>homework</code> размещены модели, формы и обработчики запросов доски домашних заданий.</p>
+<p>Основные части проекта имеют следующее назначение:</p>
+<table>
+<thead>
+<tr>
+<th>Файл или папка</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manage.py</code></td>
+<td>Выполнение команд Django, в том числе миграций и запуска сервера</td>
+</tr>
+<tr>
+<td><code>config/settings.py</code></td>
+<td>Подключение приложений, базы данных, шаблонизаторов и статических файлов</td>
+</tr>
+<tr>
+<td><code>config/urls.py</code></td>
+<td>Подключение Django Admin и маршрутов приложения <code>homework</code></td>
+</tr>
+<tr>
+<td><code>config/jinja2.py</code></td>
+<td>Настройка окружения Jinja2 и функций <code>url</code> и <code>static</code></td>
+</tr>
+<tr>
+<td><code>homework/models.py</code></td>
+<td>Описание структуры данных и проверок моделей</td>
+</tr>
+<tr>
+<td><code>homework/forms.py</code></td>
+<td>Формы регистрации, отправки ответа, создания задания и оценивания</td>
+</tr>
+<tr>
+<td><code>homework/views.py</code></td>
+<td>Обработка запросов и проверка прав пользователей</td>
+</tr>
+<tr>
+<td><code>homework/urls.py</code></td>
+<td>Маршруты пользовательских страниц</td>
+</tr>
+<tr>
+<td><code>homework/admin.py</code></td>
+<td>Регистрация моделей и ограничения доступа в Django Admin</td>
+</tr>
+<tr>
+<td><code>homework/migrations/</code></td>
+<td>Изменения структуры базы данных</td>
+</tr>
+<tr>
+<td><code>templates/jinja2/homework/</code></td>
+<td>Пользовательские HTML-шаблоны</td>
+</tr>
+<tr>
+<td><code>static/css/style.css</code></td>
+<td>Общие стили пользовательского сайта</td>
+</tr>
+<tr>
+<td><code>homework/tests.py</code></td>
+<td>Автоматические проверки основных сценариев приложения</td>
+</tr>
+</tbody>
+</table>
+<p>Для PostgreSQL в <code>DATABASES</code> выбран backend <code>django.db.backends.postgresql</code>. Параметры подключения <code>DB_NAME</code>, <code>DB_USER</code>, <code>DB_PASSWORD</code>, <code>DB_HOST</code> и <code>DB_PORT</code> загружаются из переменных окружения. </p>
+<p>В проекте настроены два движка шаблонов. Пользовательские страницы формируются Jinja2 из папки <code>templates/jinja2/</code>; при вызове <code>render()</code> для них указано <code>using='jinja2'</code>. Стандартный движок <code>DjangoTemplates</code> сохранён для Django Admin. В окружение Jinja2 добавлены функции построения маршрутов <code>url</code> и ссылок на статические файлы <code>static</code>.</p>
+<p>Общий шаблон <code>base.html</code> содержит название «Учебный портал», навигацию и подключение CSS. Остальные пользовательские страницы наследуют его и заполняют основной блок содержимого. </p>
+<p>Локальный запуск приложения выполняется из папки проекта в активированном виртуальном окружении:</p>
+<pre><code class="language-bash">python manage.py runserver
+</code></pre>
+<p>Главная страница доступна по адресу <code>http://127.0.0.1:8000/</code>. Неавторизованный пользователь видит приветствие и две основные кнопки для входа и регистрации.</p>
+<p><img alt="Главная страница доски домашних заданий" src="../images/home.png" /></p>
+<p><em>Рисунок 1 - Главная страница сайта с приветствием и кнопками входа и регистрации.</em></p>
+<h3 id="views">Основные представления (views)</h3>
+<p>Представления в <code>homework/views.py</code> обрабатывают HTTP-запросы, проверяют данные и права пользователя, обращаются к моделям через Django ORM и передают результат в шаблоны. После успешного сохранения формы обычно выполняется перенаправление на соответствующую страницу.</p>
+<table>
+<thead>
+<tr>
+<th>Представление</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index()</code></td>
+<td>Показывает стартовую страницу гостю, а авторизованного пользователя перенаправляет в раздел его роли.</td>
+</tr>
+<tr>
+<td><code>register()</code></td>
+<td>Проверяет форму регистрации, создаёт пользователя и профиль ученика, выполняет вход.</td>
+</tr>
+<tr>
+<td><code>login_view()</code></td>
+<td>Проверяет логин и пароль через <code>AuthenticationForm</code> и авторизует пользователя.</td>
+</tr>
+<tr>
+<td><code>logout_view()</code></td>
+<td>Завершает сессию по защищённому POST-запросу и возвращает на главную страницу.</td>
+</tr>
+<tr>
+<td><code>homeworks()</code></td>
+<td>Получает задания группы ученика, применяет поиск, фильтры и пагинацию, добавляет его статусы и оценки.</td>
+</tr>
+<tr>
+<td><code>homework_detail()</code></td>
+<td>Показывает отдельное задание своей группы и собственный ответ; при POST-запросе проверяет и сохраняет новую сдачу.</td>
+</tr>
+<tr>
+<td><code>teacher()</code></td>
+<td>Показывает собственные задания преподавателя с поиском, фильтрами группы, дисциплины и статуса проверки и пагинацией.</td>
+</tr>
+<tr>
+<td><code>teacher_homework_form()</code></td>
+<td>Создаёт задание от имени текущего преподавателя либо редактирует его собственное задание, если передан <code>pk</code>.</td>
+</tr>
+<tr>
+<td><code>teacher_submissions()</code></td>
+<td>Показывает ответы учеников на выбранное собственное задание преподавателя.</td>
+</tr>
+<tr>
+<td><code>teacher_grade()</code></td>
+<td>Проверяет форму оценки и разрешение преподавателя, изменяет только оценку ответа на его задание.</td>
+</tr>
+<tr>
+<td><code>grades()</code></td>
+<td>Проверяет доступ к группе и формирует строки учеников, столбцы заданий и значения оценок для журнала.</td>
+</tr>
+</tbody>
+</table>
+<p>В списках ученика и преподавателя используется общая вспомогательная функция <code>paginate_homeworks()</code>. Она делит уже отфильтрованную выборку на страницы по пять заданий и подготавливает параметры для ссылок перехода. Самостоятельного HTTP-маршрута у этой функции нет.</p>
+<h3 id="_1">Основные шаблоны пользовательского интерфейса</h3>
+<p>Пользовательские шаблоны находятся в <code>templates/jinja2/homework/</code>. Представления передают в них формы, задания, ответы и данные журнала для формирования HTML-страниц.</p>
+<table>
+<thead>
+<tr>
+<th>Шаблон</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>base.html</code></td>
+<td>Общая основа страниц: название портала, навигация, выход и подключение CSS.</td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>Стартовая страница с приветствием и основными кнопками входа и регистрации.</td>
+</tr>
+<tr>
+<td><code>register.html</code></td>
+<td>Форма самостоятельной регистрации ученика и выбор группы.</td>
+</tr>
+<tr>
+<td><code>login.html</code></td>
+<td>Общая форма входа по логину и паролю.</td>
+</tr>
+<tr>
+<td><code>homeworks.html</code></td>
+<td>Кабинет ученика: группа, поиск, фильтры и карточки заданий со статусами и оценками.</td>
+</tr>
+<tr>
+<td><code>homework_detail.html</code></td>
+<td>Полные сведения о задании и форма отправки либо просмотр сохранённого ответа ученика.</td>
+</tr>
+<tr>
+<td><code>teacher.html</code></td>
+<td>Кабинет преподавателя: его задания, фильтры и переходы к созданию, редактированию, ответам, журналу и Django Admin.</td>
+</tr>
+<tr>
+<td><code>teacher_homework_form.html</code></td>
+<td>Общая страница формы создания и редактирования домашнего задания.</td>
+</tr>
+<tr>
+<td><code>teacher_submissions.html</code></td>
+<td>Список ответов учеников со статусами, оценками и переходом к оцениванию.</td>
+</tr>
+<tr>
+<td><code>teacher_grade.html</code></td>
+<td>Просмотр работы ученика и форма выставления или изменения оценки.</td>
+</tr>
+<tr>
+<td><code>grades.html</code></td>
+<td>Таблица успеваемости группы; для преподавателя также выбор доступной группы.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. Проектирование базы данных</h2>
+<p>Для учётных записей используется стандартная модель Django <code>User</code>. В ней хранятся логин, имя, фамилия, электронная почта, хеш пароля и признаки административного доступа. В приложении <code>homework</code> определены пять собственных моделей.</p>
+<h3 id="_2">Сводная таблица моделей и связей</h3>
+<table>
+<thead>
+<tr>
+<th>Модель</th>
+<th>Основные поля</th>
+<th>Назначение и связи</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>User</code></td>
+<td><code>username</code>, <code>first_name</code>, <code>last_name</code>, <code>email</code>, <code>password</code>, <code>is_staff</code>, <code>is_superuser</code></td>
+<td>Стандартная учётная запись Django; <code>password</code> хранит хеш. С <code>StudentProfile</code> связана один к одному. Один пользователь может быть преподавателем многих <code>Homework</code> либо автором многих <code>Submission</code>.</td>
+</tr>
+<tr>
+<td><code>StudentProfile</code></td>
+<td><code>user</code>, <code>patronymic</code>, <code>study_group</code></td>
+<td>Профиль ученика. <code>user</code> связывает его с одной учётной записью, а <code>study_group</code> указывает одну группу, в которой может быть много профилей.</td>
+</tr>
+<tr>
+<td><code>StudyGroup</code></td>
+<td><code>group_name</code></td>
+<td>Справочник учебных групп с уникальными названиями. Одна группа объединяет много <code>StudentProfile</code> и имеет много назначенных <code>Homework</code>.</td>
+</tr>
+<tr>
+<td><code>Subject</code></td>
+<td><code>subject_name</code></td>
+<td>Справочник дисциплин с уникальными названиями. Одна дисциплина связана со многими заданиями <code>Homework</code>.</td>
+</tr>
+<tr>
+<td><code>Homework</code></td>
+<td><code>subject</code>, <code>teacher</code>, <code>study_group</code>, <code>issue_at</code>, <code>deadline</code>, <code>description</code>, <code>penalty_info</code></td>
+<td>Задание одной дисциплины, одного преподавателя и одной группы. Может иметь много ответов <code>Submission</code>.</td>
+</tr>
+<tr>
+<td><code>Submission</code></td>
+<td><code>student</code>, <code>homework</code>, <code>answer_text</code>, <code>submitted_at</code>, <code>grade</code></td>
+<td>Ответ одного ученика на одно задание с временем отправки и оценкой. Каждая из двух связей со стороны ученика и задания имеет тип один ко многим; пара <code>student</code> и <code>homework</code> уникальна.</td>
+</tr>
+</tbody>
+</table>
+<p>Связь «один к одному» означает, что одному пользователю соответствует не более одного профиля ученика. При связи «один ко многим» одна запись, например учебная группа, может быть связана с несколькими записями другой модели, например профилями учеников.</p>
+<h3 id="studygroup">Модель StudyGroup</h3>
+<p>Модель <code>StudyGroup</code> представляет учебную группу. Её основное поле <code>group_name</code> содержит уникальное название группы. На эту модель ссылаются профили учеников и назначенные группе домашние задания.</p>
+<h3 id="subject">Модель Subject</h3>
+<p>Модель <code>Subject</code> хранит дисциплину. Поле <code>subject_name</code> содержит её уникальное название. Одна дисциплина может иметь несколько домашних заданий.</p>
+<h3 id="studentprofile">Модель StudentProfile</h3>
+<p>Модель <code>StudentProfile</code> дополняет стандартного пользователя данными ученика:</p>
+<ul>
+<li><code>user</code> связь один к одному с <code>User</code>;</li>
+<li><code>patronymic</code> отчество;</li>
+<li><code>study_group</code> ссылка на учебную группу.</li>
+</ul>
+<p>Имя, фамилия и электронная почта остаются в <code>User</code> и не дублируются в профиле. </p>
+<h3 id="homework">Модель Homework</h3>
+<p>Модель <code>Homework</code> содержит сведения о домашнем задании:</p>
+<ul>
+<li><code>subject</code> дисциплина;</li>
+<li><code>teacher</code> пользователь, указанный преподавателем;</li>
+<li><code>study_group</code> группа, которой назначено задание;</li>
+<li><code>issue_at</code> дата выдачи;</li>
+<li><code>deadline</code> срок сдачи;</li>
+<li><code>description</code> текст задания;</li>
+<li><code>penalty_info</code> информация о штрафах, которая может отсутствовать.</li>
+</ul>
+<p>Период выполнения определяется датой выдачи и сроком сдачи. Отдельное поле для его дублирования не создаётся. Метод <code>Homework.clean()</code> проверяет, что дедлайн не предшествует дате выдачи, а преподаватель имеет признак <code>is_staff=True</code>.</p>
+<h3 id="submission">Модель Submission</h3>
+<p>Модель <code>Submission</code> связывает ученика с конкретным заданием и хранит результат сдачи:</p>
+<ul>
+<li><code>student</code> пользователь, отправивший работу;</li>
+<li><code>homework</code> домашнее задание;</li>
+<li><code>answer_text</code> текст ответа;</li>
+<li><code>submitted_at</code> автоматически записываемые дата и время отправки;</li>
+<li><code>grade</code> оценка от 2 до 5, которая до проверки может быть пустой (<code>NULL</code>).</li>
+</ul>
+<p>Для пары <code>student</code> и <code>homework</code> задано ограничение уникальности <code>unique_student_homework_submission</code>. Оно запрещает создание нескольких сдач одного задания одним учеником. В <code>Submission.clean()</code> проверяются наличие профиля ученика, отсутствие у автора признака преподавателя и совпадение группы ученика с группой задания.</p>
+<h3 id="_3">Связи между моделями и миграции</h3>
+<p>Основные связи структуры данных:</p>
+<ul>
+<li><code>User</code> - <code>StudentProfile</code>: один к одному;</li>
+<li><code>StudyGroup</code>- <code>StudentProfile</code>: один ко многим;</li>
+<li><code>Subject</code>- <code>Homework</code>: один ко многим;</li>
+<li><code>User</code>- <code>Homework</code>: один ко многим, преподаватель и его задания;</li>
+<li><code>StudyGroup</code>- <code>Homework</code>: один ко многим;</li>
+<li><code>User</code>- <code>Submission</code>: один ко многим, ученик и его ответы;</li>
+<li><code>Homework</code>- <code>Submission</code>: один ко многим, задание и отправленные работы.</li>
+</ul>
+<p>Таким образом, <code>Submission</code> позволяет хранить отдельный ответ и отдельную оценку для каждого ученика по каждому заданию. Оценки не копируются в <code>Homework</code>, а статусы сдачи вычисляются по существующим данным.</p>
+<p>Создание таблиц и изменение их структуры выполняются миграциями Django.  Основные команды работы с миграциями:</p>
+<pre><code class="language-bash">python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+<p>Записи сохраняются в PostgreSQL через Django ORM. Собственные таблицы приложения имеют имена <code>homework_studygroup</code>, <code>homework_subject</code>, <code>homework_studentprofile</code>, <code>homework_homework</code> и <code>homework_submission</code>.</p>
+<h2 id="4">4. Реализация авторизации и разграничения прав</h2>
+<p>В приложении используется общая система авторизации Django. Отдельные модели ролей или разные формы входа для ученика и преподавателя не создаются. Права определяются по текущему пользователю, признакам <code>is_staff</code> и <code>is_superuser</code>, связанному профилю и стандартным разрешениям Django.</p>
+<h3 id="_4">Регистрация ученика</h3>
+<p>Страница <code>/register/</code> использует форму <code>StudentRegistrationForm</code>, основанную на <code>UserCreationForm</code>. Пользователь указывает логин, имя, фамилию, отчество, электронную почту, учебную группу и дважды вводит пароль. Список групп загружается из <code>StudyGroup</code>, поэтому произвольное название группы вводить нельзя.</p>
+<p>Форма проверяет обязательные поля, уникальность логина, формат почты, пароли и выбранную группу. При успешной регистрации обработчик <code>register()</code> создаёт <code>User</code> и связанный <code>StudentProfile</code> внутри одной транзакции. Новому пользователю явно задаются <code>is_staff=False</code> и <code>is_superuser=False</code>; выбора административной роли в форме нет. Пароль сохраняется средствами Django в виде хеша.</p>
+<p>После регистрации ученик автоматически авторизуется и переходит к домашним заданиям своей группы.</p>
+<p><img alt="Персональные данные в форме регистрации ученика" src="../images/registration1.png" /></p>
+<p><em>Рисунок 2 - Ввод данных ученика и выбор существующей учебной группы при регистрации.</em></p>
+<p><img alt="Пароли и завершение регистрации" src="../images/registration2.png" /></p>
+<p><em>Рисунок 3 - Поля пароля, подтверждения пароля и кнопка завершения регистрации.</em></p>
+<h3 id="_5">Вход преподавателя, ученика и администратора</h3>
+<p>Страница <code>/login/</code> использует стандартную <code>AuthenticationForm</code> и содержит только логин и пароль. После входа обработчик главной страницы определяет направление перехода: ученик попадает на <code>/homeworks/</code>, преподаватель - на <code>/teacher/</code>, суперпользователь - в Django Admin.</p>
+<p>Преподаватель не регистрируется самостоятельно. Его учётную запись создаёт или настраивает администратор через Django Admin, устанавливая <code>is_staff=True</code>, <code>is_superuser=False</code> и необходимые разрешения на модели. Например, для создания заданий требуется <code>homework.add_homework</code>, а для оценивания - <code>homework.change_submission</code>. Преподаватель может работать с разными учебными группами и не нуждается в <code>StudentProfile</code>.</p>
+<p>Суперпользователь имеет полный доступ к административной панели, пользователям и данным приложения. Для него не создаётся отдельная пользовательская административная панель.</p>
+<p><img alt="Общая страница входа" src="../images/login_to_the_account.png" /></p>
+<p><em>Рисунок 4 - Общая форма авторизации; на примере введён логин преподавателя.</em></p>
+<h3 id="_6">Проверки доступа и выход</h3>
+<p>Защищённые обработчики используют <code>login_required</code>. Проверки выполняются в Python-коде: ученик должен иметь <code>StudentProfile</code>, а преподаватель - признак <code>is_staff</code> и разрешение на соответствующее действие. Для преподавательских операций используется функция <code>check_teacher_access()</code>. В шаблонах также скрываются действия, недоступные текущему пользователю.</p>
+<p>Выход выполняется обработчиком <code>logout_view()</code> через POST-запрос с CSRF-защитой. В пользовательских Jinja2-формах используется <code>{{ csrf_input }}</code>. После завершения сессии открывается стартовая страница, а защищённые разделы снова требуют входа.</p>
+<h2 id="5">5. Интерфейс ученика</h2>
+<h3 id="_7">Список домашних заданий</h3>
+<p>После входа ученик открывает страницу <code>/homeworks/</code>. Она содержит приветствие, название его учебной группы, ссылку на журнал оценок, форму поиска и фильтров и карточки домашних заданий.</p>
+<p>Обработчик <code>homeworks()</code> определяет группу через <code>request.user.student_profile.study_group</code>. Из PostgreSQL выбираются задания всех дисциплин, назначенные этой группе. Передача идентификатора другой группы в параметрах запроса не меняет эту выборку.</p>
+<p><img alt="Кабинет ученика" src="../images/student.png" /></p>
+<p><em>Рисунок 5 - Страница ученика с названием группы, переходом в журнал и фильтрами домашних заданий.</em></p>
+<p>Карточка содержит дисциплину, преподавателя, дату выдачи, срок сдачи, описание, штрафы, собственный статус сдачи и оценку ученика. Для перехода к полному заданию предусмотрена кнопка «Подробнее».</p>
+<p>Статус вычисляется функцией <code>get_submission_status()</code>. Если ответа нет, выводится «Не сдано» либо «Не сдано, срок истёк». Для отправленного ответа показывается «Сдано в срок» или «Сдано с опозданием».</p>
+<p>Функция <code>get_grade_display()</code> выводит прочерк для несданной работы, «На проверке» для ответа без оценки и числовое значение после проверки преподавателем. На карточках используются только собственные записи <code>Submission</code> текущего пользователя.</p>
+<p><img alt="Карточки домашних заданий ученика" src="../images/list_hw_student.png" /></p>
+<p><em>Рисунок 6 - Карточки заданий с разными состояниями: ответ на проверке и работа без отправленного ответа.</em></p>
+<h3 id="_8">Просмотр задания и отправка ответа</h3>
+<p>Отдельная страница <code>/homeworks/&lt;pk&gt;/</code> формируется обработчиком <code>homework_detail()</code>. На ней показаны полные сведения о задании и блок «Мой ответ». Пока ответ не отправлен, в этом блоке доступна форма <code>SubmissionForm</code> с многострочным текстовым полем и кнопкой «Сдать задание».</p>
+<p><img alt="Отдельное домашнее задание и ввод ответа" src="../images/student_viewing_hw_card1.png" /></p>
+<p><em>Рисунок 7 - Просмотр полного задания и заполнение текстового ответа после истечения дедлайна.</em></p>
+<p>При отправке проверяются авторизация, роль ученика, наличие профиля, принадлежность задания его группе, непустой текст и отсутствие предыдущей сдачи. Автор определяется через <code>request.user</code>, а задание — по защищённому маршруту. Поля автора, времени и оценки ученик не выбирает.</p>
+<p>Перед сохранением вызывается валидация модели. Затем в таблице <code>homework_submission</code> создаётся запись с текстом ответа, автоматически установленным временем отправки и пустой оценкой. После успешного POST-запроса выполняется перенаправление на ту же страницу задания.</p>
+<p>После сдачи форма заменяется сохранённым ответом, датой и временем отправки, статусом и оценкой. Повторная отправка, редактирование и удаление ответа через ученический интерфейс не предусмотрены.</p>
+<p><img alt="Отправленный ответ ученика" src="../images/student_answer.png" /></p>
+<p><em>Рисунок 8 - Сохранённый ответ, время отправки и статус «Сдано с опозданием».</em></p>
+<p>Дедлайн включает весь календарный день. Для сравнения с <code>submitted_at</code> используется локальная дата Django, полученная через <code>timezone.localdate()</code>. В текущих настройках проекта выбран часовой пояс <code>UTC</code>. Просроченные ответы разрешены; автоматического снижения оценки нет, штрафы остаются текстовой информацией для преподавателя.</p>
+<p>При прямом открытии задания по идентификатору <code>get_object_or_404()</code> также ограничивает выборку группой ученика. Чужое или несуществующее задание возвращает 404. Тексты ответов других учеников на этой странице не отображаются. Для возврата предусмотрена ссылка «Назад к списку заданий».</p>
+<h2 id="6-django-admin">6. Интерфейс преподавателя и Django Admin</h2>
+<h3 id="_9">Кабинет и управление заданиями</h3>
+<p>Кабинет преподавателя расположен по маршруту <code>/teacher/</code>. Он содержит приветствие, кнопки создания задания и перехода в Django Admin, отдельный переход в журнал и раздел «Мои домашние задания».</p>
+<p><img alt="Кабинет преподавателя" src="../images/teacher.png" /></p>
+<p><em>Рисунок 9 - Кабинет преподавателя с основными действиями и общей формой поиска и фильтрации.</em></p>
+<p>В список включаются только задания, у которых <code>Homework.teacher</code> совпадает с текущим пользователем. На карточке отображаются дисциплина, группа, краткое описание, даты, количество отправленных ответов и действия «Посмотреть ответы» и «Редактировать». Доступность действий зависит от разрешений преподавателя.</p>
+<p><img alt="Собственные задания преподавателя" src="../images/list_homeworks_teacher.png" /></p>
+<p><em>Рисунок 10 - Задания одного преподавателя для разных учебных групп и кнопки работы с ними.</em></p>
+<p>Создание выполняется на <code>/teacher/homeworks/create/</code>. Форма <code>HomeworkForm</code> содержит дисциплину, учебную группу, дату выдачи, срок сдачи, описание и информацию о штрафах. Дисциплина и группа выбираются из существующих записей PostgreSQL. Преподаватель в форме не выбирается: обработчик <code>teacher_homework_form()</code> задаёт <code>teacher=request.user</code>.</p>
+<p><img alt="Форма создания домашнего задания" src="../images/creating_hw_teacher.png" /></p>
+<p><em>Рисунок 11 - Выбор дисциплины и группы, заполнение дат, описания и штрафов при создании задания.</em></p>
+<p>Для изменения используется <code>/teacher/homeworks/&lt;pk&gt;/edit/</code> и тот же обработчик формы. Открыть и изменить можно только собственное задание. После появления хотя бы одной сдачи группа, дисциплина и даты блокируются на сервере; текст задания и штрафы остаются доступными для редактирования. Это сохраняет принадлежность уже отправленных работ и смысл их статусов.</p>
+<h3 id="_10">Ответы учеников и оценивание через сайт</h3>
+<p>Кнопка «Посмотреть ответы» открывает <code>/teacher/homeworks/&lt;pk&gt;/submissions/</code>. Обработчик <code>teacher_submissions()</code> показывает ответы на выбранное собственное задание: имя ученика, текст работы, время отправки, своевременность сдачи и текущую оценку. Для задания другого преподавателя доступ к этой странице запрещён выборкой по владельцу.</p>
+<p><img alt="Ответы учеников на задание" src="../images/list_answers_teacher.png" /></p>
+<p><em>Рисунок 12 - Своевременный и просроченный ответы учеников с оценками и действиями для их изменения.</em></p>
+<p>По кнопке «Оценить» или «Изменить оценку» открывается <code>/teacher/submissions/&lt;pk&gt;/grade/</code>. Страница содержит сведения о работе и форму <code>GradeForm</code>, в которой доступно только поле <code>grade</code>. Проверяются разрешение <code>homework.change_submission</code>, принадлежность задания преподавателю и допустимость оценки от 2 до 5.</p>
+<p>Обработчик <code>teacher_grade()</code> сохраняет только <code>Submission.grade</code>. Автор, текст и время отправки ответа не изменяются. После сохранения преподаватель возвращается к списку ответов, где отображается сообщение об успешном оценивании. Ученик видит новое значение при следующей загрузке карточки или страницы задания.</p>
+<h3 id="_11">Стандартная административная панель</h3>
+<p>Административная панель доступна по <code>/admin/</code>. В <code>homework/admin.py</code> зарегистрированы <code>StudyGroup</code>, <code>Subject</code>, <code>StudentProfile</code>, <code>Homework</code> и <code>Submission</code>. Для списков настроены стандартные <code>list_display</code>, <code>list_filter</code> и <code>search_fields</code>.</p>
+<p><img alt="Django Admin под учётной записью преподавателя" src="../images/teacher_Django_admin.png" /></p>
+<p><em>Рисунок 13 - Главная страница стандартной Django Admin с разделами приложения и доступными преподавателю действиями.</em></p>
+<p>Выставление оценок через Django Admin сохранено в соответствии с условием варианта. Преподаватель с необходимыми правами открывает раздел <code>Submissions</code>, выбирает работу, изменяет <code>grade</code> и сохраняет запись. Здесь используется то же поле <code>Submission.grade</code>, что и в обычном кабинете, поэтому оценки между интерфейсами не дублируются.</p>
+<p>В <code>HomeworkAdmin</code> выборка обычного преподавателя ограничена собственными заданиями. В <code>SubmissionAdmin</code> ему доступны только ответы на эти задания; автор, задание, текст и время ответа доступны только для чтения. Ограничения действуют также при прямом открытии URL. Суперпользователь сохраняет полный доступ ко всем объектам.</p>
+<h2 id="7">7. Журнал успеваемости</h2>
+<p>Страница <code>/grades/</code> предназначена для просмотра оценок учебной группы. Её формирует обработчик <code>grades()</code>, а представление таблицы находится в шаблоне <code>grades.html</code>.</p>
+<p>Таблица строится по следующему принципу:</p>
+<ul>
+<li>строки - все ученики выбранной группы;</li>
+<li>столбцы - отдельные домашние задания этой группы;</li>
+<li>ячейки - оценки соответствующих учеников за соответствующие задания.</li>
+</ul>
+<p>В заголовке столбца указываются дисциплина, номер задания на основе его идентификатора и срок сдачи. Несколько заданий одного предмета имеют отдельные столбцы. Если сдачи нет или её оценка равна <code>None</code>, выводится прочерк «—».</p>
+<p>Список учеников получается из <code>StudentProfile</code>, поэтому в журнале присутствуют и ученики без отправленных работ. Задания выбираются из <code>Homework</code>, а оценки - из <code>Submission</code>. Обработчик формирует словарь по паре идентификаторов ученика и задания и обычными циклами собирает строки таблицы. Отдельной модели журнала и копирования оценок нет.</p>
+<p>Ученики сортируются по фамилии, имени и идентификатору пользователя. Задания - по дисциплине, дедлайну и идентификатору. Для широкой таблицы предусмотрена горизонтальная прокрутка.</p>
+<h3 id="_12">Журнал ученика</h3>
+<p>Ученик открывает журнал кнопкой «Журнал оценок группы». Группа определяется только по его профилю. Он видит оценки всех учеников своей группы, а собственная строка выделяется. Тексты чужих ответов, электронные адреса и пароли в таблицу не передаются. Запрос журнала другой группы отклоняется на сервере.</p>
+<p><img alt="Журнал оценок со стороны ученика" src="../images/viewing_journal_student.png" /></p>
+<p><em>Рисунок 14 - Журнал своей группы: ученики, отдельные задания, оценки, прочерки и выделенная строка текущего пользователя.</em></p>
+<h3 id="_13">Журнал преподавателя</h3>
+<p>Преподаватель открывает журнал отдельной кнопкой из кабинета. Ему доступны группы, которым он назначил хотя бы одно задание, при наличии разрешений на просмотр заданий и сдач. После выбора группы таблица обновляется обычным GET-запросом: выпадающий список автоматически отправляет форму.</p>
+<p>В журнале доступны все задания выбранной группы, в том числе задания других преподавателей. Ссылка «Посмотреть ответы» показывается только для собственных заданий текущего преподавателя. Журнал служит для просмотра: изменение оценок выполняется через существующие страницы проверки ответа или Django Admin.</p>
+<p><img alt="Журнал оценок со стороны преподавателя" src="../images/viewing_journal_teacher.png" /></p>
+<p><em>Рисунок 15 - Выбор доступной группы преподавателем и переход к ответам по собственным заданиям.</em></p>
+<p>Для суперпользователя доступны журналы всех групп. При отсутствии учеников, заданий или доступных преподавателю групп выводятся соответствующие сообщения вместо ошибки страницы.</p>
+<h2 id="8">8. Поиск, фильтрация и пагинация</h2>
+<h3 id="_14">Поиск и совместная фильтрация</h3>
+<p>В списках ученика и преподавателя предусмотрено поле «Поиск домашних заданий» с подсказкой «Введите предмет или текст задания». Поиск выполняется средствами Django ORM по <code>Subject.subject_name</code> и <code>Homework.description</code>. Условия объединяются через <code>Q</code>, а <code>icontains</code> позволяет искать без учёта регистра.</p>
+<p>Ученик может выбрать дисциплину и один из трёх вариантов статуса:</p>
+<ul>
+<li>«Все задания» - все доступные задания его группы;</li>
+<li>«Не сдано» - задания без собственной записи <code>Submission</code>, независимо от дедлайна;</li>
+<li>«Сдано» - задания с собственной записью <code>Submission</code>, независимо от своевременности ответа и наличия оценки.</li>
+</ul>
+<p>Эти упрощённые варианты фильтра не заменяют подробные статусы на карточках. У преподавателя вместо статуса личной сдачи используется статус проверки:</p>
+<ul>
+<li>«Все задания»;</li>
+<li>«Есть отправленные ответы»;</li>
+<li>«Нет отправленных ответов»;</li>
+<li>«Есть непроверенные ответы», то есть сдачи с <code>grade=None</code>.</li>
+</ul>
+<p>Дополнительно преподаватель выбирает учебную группу и дисциплину. В списке групп доступны только группы его собственных заданий, а по умолчанию выбран вариант «Все домашние задания». Дисциплины в обеих формах загружаются из PostgreSQL среди доступных пользователю заданий.</p>
+<p>Поиск, группа, дисциплина и статус применяются совместно. Базовая выборка ученика всегда ограничена его группой, а преподавателя - его собственными заданиями. Поэтому параметры фильтров не позволяют получить чужие задания.</p>
+<p>Для передачи условий используется одна GET-форма на каждой странице. Параметры имеют имена <code>q</code>, <code>subject</code>, <code>status</code> и, у преподавателя, <code>group</code>. Кнопка «Найти» отправляет поисковый запрос. Выпадающие списки автоматически отправляют ту же форму через <code>onchange="this.form.submit()"</code>, сохраняя остальные введённые значения. Ссылка «Сбросить фильтры» открывает исходный список без условий.</p>
+<p>Интерфейс фильтров ученика показан на рисунке 5, преподавателя - на рисунке 9.</p>
+<h3 id="_15">Базовая пагинация</h3>
+<p>Пагинация реализована в функции <code>paginate_homeworks()</code> стандартным классом <code>django.core.paginator.Paginator</code>. На одной странице отображается <strong>5 домашних заданий</strong>. Сначала применяются поиск и фильтры, затем задания сортируются по <code>deadline</code> и <code>pk</code>, после чего результат делится на страницы.</p>
+<p>Под карточками выводятся элементы «Назад», «Страница N из M» и «Далее». На границах списка соответствующее направление недоступно. Если результат помещается на одной странице, блок переключения не показывается. Некорректный номер обрабатывается стандартным методом <code>get_page()</code> без ошибки сервера.</p>
+<p>Номер страницы передаётся в параметре <code>page</code>. Для ссылок перехода создаётся копия <code>request.GET</code>, из неё исключается прежний <code>page</code>, а остальные параметры кодируются методом <code>urlencode()</code>. Поэтому русские буквы, пробелы и выбранные фильтры сохраняются при переходах. Например, при 12 найденных заданиях страницы содержат 5, 5 и 2 карточки одного и того же отфильтрованного списка.</p>
+<p>В форме поиска и фильтров параметра <code>page</code> нет. При смене условия выполняется новый GET-запрос с первой страницы. Если подходящих заданий не найдено, выводится сообщение «По вашему запросу домашние задания не найдены», а пустой блок пагинации не отображается.</p>
+<h2 id="9">9. Заключение</h2>
+<p>В ходе лабораторной работы разработано веб-приложение «Доска домашних заданий» с использованием Django, PostgreSQL и Jinja2. Реализованы регистрация и авторизация учеников, просмотр заданий своей группы, однократная отправка текстовых ответов и отображение статусов и оценок.
+Преподавателю доступен кабинет для управления собственными заданиями, просмотра ответов и оценивания. При этом сохранена возможность выставлять оценки через стандартную Django Admin. На пользовательском сайте формируется журнал оценок всех учеников учебной группы. Поиск, совместная фильтрация и базовая пагинация помогают работать со списками домашних заданий, а CSS обеспечивает единое оформление страниц.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
